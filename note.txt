@@ -1,0 +1,5 @@
+if using typescript
+    "start": "cross-env NODE_ENV=production node -r ./tspaths ./build/src/server.js",
+    "dev": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register src/server.ts",
+    "dev-nodemon": "cross-env NODE_ENV=development nodemon -w src -e ts,json -x ts-node -r tsconfig-paths/register src/server.ts",
+    "build": "tsc"

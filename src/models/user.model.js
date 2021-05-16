@@ -5,7 +5,6 @@ module.exports = (sequelize, Sequelize) => {
       id: {
         type: Sequelize.UUID,
         allowNull: false,
-        defaultValue: true,
         primaryKey: true,
       },
       role_id: {

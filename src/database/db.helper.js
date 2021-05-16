@@ -1,5 +1,3 @@
-
-
 const connectDB = () => {
   database.connect((err) => {
     if (err) {

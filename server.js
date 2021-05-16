@@ -1,3 +1,4 @@
+require('module-alias/register');
 const express = require("express");
 const cors = require("cors");
 
@@ -12,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-const db = require("./src/database");
+const db = require("@database");
 
 db.sequelize.sync({ force: false }).then(() => {
   console.log("Drop and re-sync db.");
@@ -23,7 +24,7 @@ app.get("/api", (req, res) => {
   res.json({ message: "Welcome to nncthang API" });
 });
 
-const userRoute = require("./src/routes/user.routes");
+const userRoute = require("@routes/user.routes.js");
 app.use("/api/users", userRoute)
 
 

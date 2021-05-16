@@ -25,8 +25,8 @@ CREATE TABLE IF NOT EXISTS users (
   password text NOT NULL,
   activated boolean DEFAULT false,
   blocked boolean DEFAULT false,
-  updatedAt timestamp,
-  createdAt timestamp DEFAULT (now())
+  updated_at timestamp,
+  created_at timestamp DEFAULT (now())
 );
 ALTER TABLE users ADD CONSTRAINT users_roles_fk FOREIGN KEY (role_id) REFERENCES roles (id);
 
